@@ -7,27 +7,34 @@
 // matching elements array
 
 const intersection = (a, b) => {
-    let hashmap1 = [];
-    let hashmap2 = {};
+    // let hashmap1 = [];
+    // let hashmap2 = {};
     let matchArray = [];
 
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] in hashmap2) {
-            matchArray.push(a[i])
-        }
-        else {
-            hashmap1[a[i]] = a[i];
-        }
-    }
-    for (let i = 0; i < b.length; i++) {
-        if (b[i] in hashmap1) {
-            matchArray.push(b[i])
-        }
-        else {
-            hashmap2[b[i]] = b[i];
-        }
-    }
+    // for (let i = 0; i < a.length; i++) {
+    //     if (a[i] in hashmap2) {
+    //         matchArray.push(a[i])
+    //     }
+    //     else {
+    //         hashmap1[a[i]] = a[i];
+    //     }
+    // }
+    // for (let i = 0; i < b.length; i++) {
+    //     if (b[i] in hashmap1) {
+    //         matchArray.push(b[i])
+    //     }
+    //     else {
+    //         hashmap2[b[i]] = b[i];
+    //     }
+    // }
 
+    let firstSet = new Set(a);
+
+    for (let i = 0; i < b.length; i++) {
+        if (firstSet.has(b[i])) {
+            matchArray.push(b[i]);
+        }
+    }
     return matchArray;
 };
 
