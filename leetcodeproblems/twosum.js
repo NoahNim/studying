@@ -15,4 +15,7 @@ var twoSum = function (nums, target) {
     }
 };
 
+//adding comment here just to test git out on new WSL machine
+
 console.log(twoSum([2, 5, 5, 11], 10));
+console.log(twoSum([2, 5, 5, 11], 11));
