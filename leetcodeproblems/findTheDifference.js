@@ -5,6 +5,10 @@ var findTheDifference = function(s, t) {
     let sSet = new Set(s.split(''));
     let tSet = new Set(t.split(''));
     
+    if (s.length == 1 && t.length === 2){
+        return t[t.length - 1];
+    }
+    
     for (let i = 0; i < t.length; i++){
         if (!sSet.has(t[i]) && tSet.has(t[i])) return t[i];
     }
