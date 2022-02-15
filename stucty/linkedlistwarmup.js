@@ -31,4 +31,4 @@ const printLinkedListRecursive = (head) => {
 }
 
 printLinkedList(a);
-printLinkedListRecursive(a)
+printLinkedListRecursive(a);
