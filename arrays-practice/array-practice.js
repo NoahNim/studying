@@ -22,7 +22,14 @@ const runningSum = (arr) => {
 };
 
 const evenNumOfChars = (arr) => {
-  // Your code here
+  let even = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length % 2 === 0) {
+      even.push(arr[i]);
+    }
+  }
+  return even.length;
 };
 
 const smallerThanCurr = (arr) => {
