@@ -1,10 +1,10 @@
 const findMinimum = (arr) => {
-  let min = arr[0];
+  let min = arr[arr.length - 1];
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[0] > arr[i]) {
+    if (arr[i] < min) {
       min = arr[i];
-      arr.shift(arr[0]);
+      arr.pop();
     }
   }
   return min;
