@@ -8,44 +8,51 @@ def iterative_max_path_sum(root):
   if not root.right and not root.left:
     return root.val
   
-  stackRight = [root.right]
-  stackLeft = [root.left]
-  sumRight = 0
-  sumLeft = 0
+  stack_right = [root.right]
+  stack_left = [root.left]
+  sum_right = 0
+  sum_left = 0
   
-  sumLeft += root.val
-  sumRight += root.val
+  sum_left += root.val
+  sum_right += root.val
   
-  while stackRight:
-    node = stackRight.pop()
-    rightNode = node.right
-    leftNode = node.left
+  while stack_right:
+    node = stack_right.pop()
+    right_node = node.right
+    left_node = node.left
+    sum_right += node.val
     
-    sumRight += node.val
-    
-    if rightNode:
-      if leftNode:
-        if leftNode.val > rightNode.val:
-          stackRight.append(leftNode)
+    if righ_node:
+      if left_node:
+        if left_node.val > right_node.val:
+          stackRight.append(left_node)
       else:
-        stackRight.append(rightNode)
-  while stackLeft:
-    node = stackLeft.pop()
-    rightNode = node.right
-    leftNode = node.left
-    # print(sumLeft + node.val)
-    sumLeft += node.val
+        stackRight.append(right_node)
+  while stack_left:
+    node = stack_left.pop()
+    right_node = node.right
+    left_node = node.left
+    sum_left += node.val
         
-    if leftNode:
-      if rightNode:
-        if leftNode.val > rightNode.val:
-          stackLeft.append(leftNode)
+    if left_node:
+      if right_node:
+        if left_node.val > right_node.val:
+          stackLeft.append(left_node)
         else:
-          stackLeft.append(rightNode)
+          stackLeft.append(right_node)
       else:
-        stackLeft.append(leftNode)
+        stackLeft.append(left_node)
     
-  if sumRight > sumLeft:
-    return sumRight
+  if sum_right > sum_left:
+    return sum_right
   else:
-    return sumLeft
+    return sum_left
+
+def recursive_max_path_sum(root):
+    if root is None:
+        return float("-inf")
+    if root.right is None and root.left is None:
+        return root.val
+    max_left = recursive_max_path_sum(root.left)
+    max_right = recursive_max_path_sum(root.right)
+    return root.val + Max(max_left, max_right)
