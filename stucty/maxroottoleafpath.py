@@ -22,7 +22,7 @@ def iterative_max_path_sum(root):
     left_node = node.left
     sum_right += node.val
     
-    if righ_node:
+    if right_node:
       if left_node:
         if left_node.val > right_node.val:
           stackRight.append(left_node)
