@@ -1,0 +1,22 @@
+Two Types: Primtive and Non Primitive
+
+These groups are on the basis of is it pre-defined in the programming language or defined by the user.
+
+The data structures that are built in the programming language itself and are available to the programmer are referred to as Primitive Data Structures.
+
+The most common Prinitive Data Structures are:
+Integer
+Float
+Character
+String
+Boolean
+
+Non Primitive Data Structures are those that are defined by the user, and are derived from promitive data types by combing two or more primitive data structures. These data structures can be subdivided as linear data structures and non-linear data structures.
+
+In linear data structures the data is arranged in a linear, sequential manner, and they can be either static or dynamic. In static linear data structures associated memory are fixed, at compile time.
+Static: array
+In dynamic structures associated memory locations change.
+Dynamic: linked list, stack, queue.
+
+In non-linear non primitive data structures the data item is connected to other data items, they are not organized sequentially. It is possible for a piece of data to be connected to more than one piece of data.
+Non-linear: Tree, graph
