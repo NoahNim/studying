@@ -2,8 +2,6 @@
 # The function should return the power of the base to the exponent. 
 # This function should mimic the functionality of math.pow() - do not worry about negative bases and exponents.
 
-import math
-
 def power(base, exponent):
     if exponent == 0:
         return 1
